@@ -128,8 +128,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 13vh;
+  margin-bottom: 13vh;
 }
 .passion_card{
   width: 20vw;
@@ -155,4 +155,66 @@
   font-size: 1.2em;
   word-wrap: break-word;
   word-break: break-all;
+}
+/* Skill Card */
+.skill_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13vh;
+  margin-bottom: 13vh;
+}
+.skill_flex{
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.encard_skillimg{
+  width: 5vw;
+  height: 5vw;
+}
+.skillcard_view{
+  display: flex;
+  margin: 2vw;
+}
+.skill_bar{
+  width: 35vw;
+  height: 15px;
+  position: relative;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
+}
+.skill_load{
+  width: 90%;
+  height: 15px;
+  background: blue;
+  border-radius: 15px;
+}
+.skill_zone{
+  display: flex;
+  align-items: flex-end;
+}
+.skill_title{
+  display: flex;
+  justify-content: space-between;
+}
+.skill_boxe{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1vw;
+}
+.sk_title{
+  font-size: 1.3em;
+}
+.percent{
+  font-size: 1.5em;
+}
+.sk_time{
+  font-family: helvetica;
+  margin-left: 1vw;
+  font-weight: bold;
+  color: grey;
 }

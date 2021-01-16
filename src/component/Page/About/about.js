@@ -7,6 +7,15 @@ import geek from './geek.jpg'
 import techno from './cpu.svg'
 import music from './radio.svg'
 import dev from './seo.svg'
+import js from './js.svg'
+import ai from './ai.svg'
+import ps from './ps.svg'
+import afd from './afd.svg'
+import html from './html.svg'
+import wp from './wp.svg'
+import sass from './sass.svg'
+import react from './react.svg'
+import bootstrap from './bootstrap.svg'
 import BtnMore from '../../Button/button_more'
 
 
@@ -80,6 +89,7 @@ class ScreenAbout extends Component{
         <HeroAbout />
         <Who />
         <Passion />
+        <Skill />
         <h1>Hello world</h1>
       </div>
     )
@@ -153,7 +163,7 @@ class Passion extends Component{
       },
       {
         image: music,
-        titre: 'Music',
+        titre: 'Musique',
         content: 'Depuis que je suis enfant je suis passionné par la technologie, que se soit les jeux vidéo, l électronique ou encore la cryptomonnaie. Je suis toujours intéresser par les nouveautés dans ces domaines et la constante évolution de la technologie me permet de ne jamais être lassé par ces domaines.'
       },
       {
@@ -191,6 +201,119 @@ class PassionCard extends Component{
         </div>
         <h5 className={PageAboutStyle.titlePa}>{this.props.titre}</h5>
         <p className={PageAboutStyle.contentPa}>{this.props.content}</p>
+      </div>
+    )
+  }
+}
+
+class Skill extends Component{
+  render(){
+    let SkillTable = [
+      {
+        image: ai,
+        title: 'Illustrator',
+        time: '2 years',
+        percent: '60%'
+      },
+      {
+        image: html,
+        title: 'HTML/CSS',
+        time: '3 years',
+        percent: '90%'
+      },
+      {
+        image: ps,
+        title: 'Photoshop',
+        time: '1 years',
+        percent: '30%'
+      },
+      {
+        image: wp,
+        title: 'Wordpress',
+        time: '5 months',
+        percent: '70%'
+      },
+      {
+        image: afd,
+        title: 'Affinity Designer',
+        time: '1 years',
+        percent: '50%'
+      },
+      {
+        image: js,
+        title: 'Javascript',
+        time: '8 months',
+        percent: '80%'
+      },
+      {
+        image: sass,
+        title: 'Sass',
+        time: '2 months',
+        percent: '40%'
+      },
+      {
+        image: react,
+        title: 'React',
+        time: '3 months',
+        percent: '60%'
+      },
+      {
+        image: bootstrap,
+        title: 'Bootstrap',
+        time: '6 months',
+        percent: '50%'
+      },
+      {
+        image: bootstrap,
+        title: 'PHP 7.0',
+        time: '1 year',
+        percent: '75%'
+      }
+    ]
+    let AfficheSkill = []
+    for (var i = 0; i < SkillTable.length; i++) {
+      AfficheSkill.push(<SkillCard image={SkillTable[i].image} title={SkillTable[i].title} time={SkillTable[i].time} loader={SkillTable[i].percent} />)
+    }
+    return(
+      <div className={PageAboutStyle.skill_view}>
+        <div className={PageAboutStyle.title_zone}>
+          <div className={PageAboutStyle.number_box}>
+            <div className={PageAboutStyle.line_nb}></div>
+            <p className={PageAboutStyle.number}>03</p>
+          </div>
+          <h3 className={PageAboutStyle.who_title}>Compétences</h3>
+        </div>
+        <div className={PageAboutStyle.skill_box}>
+          <div className={PageAboutStyle.skill_flex}>
+            {AfficheSkill}
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+class SkillCard extends Component{
+  render(){
+    let loader = {
+      width: this.props.loader
+    }
+    return(
+      <div className={PageAboutStyle.skillcard_view}>
+        <div className={PageAboutStyle.encard_skillimg}>
+          <img src={this.props.image} width='100%' height='100%' />
+        </div>
+        <div className={PageAboutStyle.skill_boxe}>
+          <div className={PageAboutStyle.skill_title}>
+            <div className={PageAboutStyle.skill_zone}>
+              <h5 className={PageAboutStyle.sk_title}>{this.props.title}</h5>
+              <p className={PageAboutStyle.sk_time}>{this.props.time}</p>
+            </div>
+            <p className={PageAboutStyle.percent}>{this.props.loader}</p>
+          </div>
+          <div className={PageAboutStyle.skill_bar}>
+            <div style={loader} className={PageAboutStyle.skill_load}></div>
+          </div>
+        </div>
       </div>
     )
   }
