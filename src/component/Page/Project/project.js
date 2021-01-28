@@ -78,7 +78,13 @@ class ScreenContact extends Component{
   render(){
     return(
       <div className={PageProjectStyle.screen_view}>
-        <ContactForm />
+        <div className={PageProjectStyle.form_box} >
+          <div className={PageProjectStyle.info_zone} >
+            <div className={PageProjectStyle.info_box} >
+            </div>
+          </div>
+          <ContactForm />
+        </div>
       </div>
     )
   }

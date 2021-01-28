@@ -17,13 +17,19 @@ class ContactForm extends Component {
       });
   }
   render() {
-    const text = [{
-      intro: "N'hésitez pas à nous laisser un message ci-dessous"
-    }]
+    const text = {
+      intro: "N'hésitez pas à nous laisser un message ci-dessous",
+      titre: "Entrer en contact"
+    }
+    let area = {
+      marginLeft: "26px"
+    }
+    console.log(text);
     return (
       <div className={ContactFormStyle.contactForm_box}>
         <div className={ContactFormStyle.intro_contact}>
-          <p>{text.intro}</p>
+          <h2 className={ContactFormStyle.titre_intro} >{text.titre}</h2>
+          <p className={ContactFormStyle.text_intro} >{text.intro}</p>
         </div>
         <form className={ContactFormStyle.form} onSubmit={this.sendEmail}>
         <input type="hidden" name="contact_number" />
@@ -36,23 +42,35 @@ class ContactForm extends Component {
             </div>
           </div>
           <div className={ContactFormStyle.contact_line}>
-            <label>Phone</label>
-            <input type="number" name="phone" />
+            <div className={ContactFormStyle.cusput}>
+              <div className={ContactFormStyle.encard_glass}>
+                <img src={name} alt="" />
+              </div>
+              <input className={ContactFormStyle.custom_input} type="number" name="phone" placeholder="Téléphone" />
+            </div>          </div>
+          <div className={ContactFormStyle.contact_line}>
+            <div className={ContactFormStyle.cusput}>
+              <div className={ContactFormStyle.encard_glass}>
+                <img src={name} alt="" />
+              </div>
+              <input className={ContactFormStyle.custom_input} type="text" name="company" placeholder="Entreprise" />
+            </div>          </div>
+          <div className={ContactFormStyle.contact_line}>
+            <div className={ContactFormStyle.cusput}>
+              <div className={ContactFormStyle.encard_glass}>
+                <img src={name} alt="" />
+              </div>
+              <input className={ContactFormStyle.custom_input} type="email" name="user_email" placeholder="E-mail" />
+            </div>          </div>
+          <div className={ContactFormStyle.contact_line}>
+            <div className={ContactFormStyle.custext}>
+              <textarea style={area} className={ContactFormStyle.custom_textarea} name="message" placeholder="message" />
+            </div>
           </div>
           <div className={ContactFormStyle.contact_line}>
-            <label>Entreprise</label>
-            <input type="text" name="company" />
-          </div>
-          <div className={ContactFormStyle.contact_line}>
-            <label>Email</label>
-            <input type="email" name="user_email" />
-          </div>
-          <div className={ContactFormStyle.contact_line}>
-            <label>Message</label>
-            <textarea name="message" />
-          </div>
-          <div className={ContactFormStyle.contact_line}>
-            <input type="submit" value="Send" />
+            <div className={ContactFormStyle.sub_box}>
+              <input className={ContactFormStyle.subutton} type="submit" value="Envoyer" />
+            </div>
           </div>
         </form>
 

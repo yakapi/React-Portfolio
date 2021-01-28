@@ -1,9 +1,32 @@
 .page_content{
   /* background: black; */
+  background-image: url('797.jpg');
+  background-size: cover;
 }
 .screen_view{
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.form_box{
+  width: 44vw;
+  position: relative;
+  background: #F9F8F4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transform: translateX(4vw);
+}
+.info_zone{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: -6vw;
+}
+.info_box{
+  width: 18vw;
+  height: 80%;
+  background: #0851AB;
 }
