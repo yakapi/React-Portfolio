@@ -1,0 +1,37 @@
+.contactForm_box{
+  background: black;
+  color: white;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+.custom_input{
+  border: 1px solid royalblue;
+  background-color: royalblue;
+}
+.custom_input:focus{
+  outline: 0;
+}
+.custom_input::placeholder{
+  color: yellow;
+  font-weight: bold;
+}
+/* Supplément */
+.cusput{
+  background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 210px;
+  border-radius: 5px;
+}
+.encard_glass{
+  width: 20px;
+  height: 20px;
+}
+.encard_glass img{
+  width: 100%;
+  height: 100%;
+}

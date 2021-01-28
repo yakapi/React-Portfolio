@@ -5,6 +5,8 @@ import Navigation from '../../Navigation/nav'
 
 import BtnMore from '../../Button/button_more'
 
+import ContactForm from './ContactForm/contact'
+// init("user_UCJ5x8NfybIfSzO3bupff");
 
 
 class PageProject extends Component {
@@ -70,10 +72,13 @@ class PageProject extends Component {
 export default PageProject
 
 class ScreenContact extends Component{
+  componentDidMount(){
+  }
+
   render(){
     return(
       <div className={PageProjectStyle.screen_view}>
-        <h1>Hello world</h1>
+        <ContactForm />
       </div>
     )
   }
