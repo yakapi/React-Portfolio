@@ -16,6 +16,7 @@ import wp from './wp.svg'
 import sass from './sass.svg'
 import react from './react.svg'
 import bootstrap from './bootstrap.svg'
+import php from './php.svg'
 import BtnMore from '../../Button/button_more'
 
 
@@ -90,7 +91,7 @@ class ScreenAbout extends Component{
         <Who />
         <Passion />
         <Skill />
-        <h1>Hello world</h1>
+        <AboutFooter />
       </div>
     )
   }
@@ -212,61 +213,61 @@ class Skill extends Component{
       {
         image: ai,
         title: 'Illustrator',
-        time: '2 years',
+        time: '2 ans',
         percent: '60%'
       },
       {
         image: html,
         title: 'HTML/CSS',
-        time: '3 years',
+        time: '3 ans',
         percent: '90%'
       },
       {
         image: ps,
         title: 'Photoshop',
-        time: '1 years',
+        time: '1 an',
         percent: '30%'
       },
       {
         image: wp,
         title: 'Wordpress',
-        time: '5 months',
+        time: '5 mois',
         percent: '70%'
       },
       {
         image: afd,
         title: 'Affinity Designer',
-        time: '1 years',
+        time: '1 an',
         percent: '50%'
       },
       {
         image: js,
         title: 'Javascript',
-        time: '8 months',
+        time: '1 an',
         percent: '80%'
       },
       {
         image: sass,
         title: 'Sass',
-        time: '2 months',
+        time: '2 mois',
         percent: '40%'
       },
       {
         image: react,
         title: 'React',
-        time: '3 months',
+        time: '3 mois',
         percent: '60%'
       },
       {
         image: bootstrap,
         title: 'Bootstrap',
-        time: '6 months',
+        time: '6 mois',
         percent: '50%'
       },
       {
-        image: bootstrap,
+        image: php,
         title: 'PHP 7.0',
-        time: '1 year',
+        time: '1 an',
         percent: '75%'
       }
     ]
@@ -313,6 +314,22 @@ class SkillCard extends Component{
           <div className={PageAboutStyle.skill_bar}>
             <div style={loader} className={PageAboutStyle.skill_load}></div>
           </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+class AboutFooter extends Component{
+  render(){
+    return(
+      <div className={PageAboutStyle.footer_view}>
+        <p>victor.barlier@outlook.fr</p>
+        <div className={PageAboutStyle.footer_react}>
+          <div className={PageAboutStyle.react_enc}>
+            <img src={react} width='100%' height='100%'/>
+          </div>
+          <p className={PageAboutStyle.footer_p}>React Web App</p>
         </div>
       </div>
     )

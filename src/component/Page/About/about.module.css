@@ -189,7 +189,7 @@
 .skill_load{
   width: 90%;
   height: 15px;
-  background: blue;
+  background-image: linear-gradient(to right, #072142, #8c2b7a 65%, #ff4d5a);
   border-radius: 15px;
 }
 .skill_zone{
@@ -217,4 +217,27 @@
   margin-left: 1vw;
   font-weight: bold;
   color: grey;
+}
+/*FOOTER*/
+.footer_view{
+  background: #020B16;
+  color: white;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer_p{
+  margin-left: 1vw;
+}
+.footer_react{
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+
+}
+.react_enc{
+  width: 4vw;
+  height: 4vw;
 }
