@@ -3,9 +3,12 @@ import PageProjectStyle from './project.module.css'
 import Menu from '../../Menu/menu'
 import Navigation from '../../Navigation/nav'
 
+import email from './email.svg'
+
 import BtnMore from '../../Button/button_more'
 
 import ContactForm from './ContactForm/contact'
+import Map from './Map/map'
 // init("user_UCJ5x8NfybIfSzO3bupff");
 
 
@@ -81,6 +84,28 @@ class ScreenContact extends Component{
         <div className={PageProjectStyle.form_box} >
           <div className={PageProjectStyle.info_zone} >
             <div className={PageProjectStyle.info_box} >
+              <h2 className={PageProjectStyle.info_titre}>Informations</h2>
+              <Map />
+              <div className={PageProjectStyle.info_general}>
+                <div className={PageProjectStyle.info_line}>
+                  <div className={PageProjectStyle.encard_icon}>
+                    <img className={PageProjectStyle.img_icon} src={email} />
+                  </div>
+                  <h3 className={PageProjectStyle.info_text}>victor.barlier@oulook.fr</h3>
+                </div>
+                <div className={PageProjectStyle.info_line}>
+                  <div className={PageProjectStyle.encard_icon}>
+                    <img className={PageProjectStyle.img_icon} src={email} />
+                  </div>
+                  <h3 className={PageProjectStyle.info_text}>victor.barlier@oulook.fr</h3>
+                </div>
+                <div className={PageProjectStyle.info_line}>
+                  <div className={PageProjectStyle.encard_icon}>
+                    <img className={PageProjectStyle.img_icon} src={email} />
+                  </div>
+                  <h3 className={PageProjectStyle.info_text}>victor.barlier@oulook.fr</h3>
+                </div>
+              </div>
             </div>
           </div>
           <ContactForm />

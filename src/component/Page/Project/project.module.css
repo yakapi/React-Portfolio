@@ -1,6 +1,6 @@
 .page_content{
   /* background: black; */
-  background-image: url('797.jpg');
+  background-image: url('back_contact.svg');
   background-size: cover;
 }
 .screen_view{
@@ -29,4 +29,27 @@
   width: 18vw;
   height: 80%;
   background: #0851AB;
+  color: white;
+  font-family: helvetica;
+  padding: 30px;
+}
+.info_titre{
+  font-size: 28px;
+  font-weight: bold;
+}
+.info_line{
+  display: flex;
+  align-items: center;
+}
+.encard_icon{
+  width: 35px;
+  height: 35px;
+}
+.img_icon{
+  width: 100%;
+  height: 100%;
+}
+.info_text{
+  font-weight: bold;
+  margin-left: 1vw;
 }

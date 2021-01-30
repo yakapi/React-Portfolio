@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import ContactFormStyle from './contact.module.css'
 import emailjs from 'emailjs-com';
 import name from './name.svg'
+import phone from './phone.svg'
+import building from './building.svg'
+import email from './email.svg'
 
 
 class ContactForm extends Component {
@@ -44,21 +47,21 @@ class ContactForm extends Component {
           <div className={ContactFormStyle.contact_line}>
             <div className={ContactFormStyle.cusput}>
               <div className={ContactFormStyle.encard_glass}>
-                <img src={name} alt="" />
+                <img src={phone} alt="" />
               </div>
               <input className={ContactFormStyle.custom_input} type="number" name="phone" placeholder="Téléphone" />
             </div>          </div>
           <div className={ContactFormStyle.contact_line}>
             <div className={ContactFormStyle.cusput}>
               <div className={ContactFormStyle.encard_glass}>
-                <img src={name} alt="" />
+                <img src={building} alt="" />
               </div>
               <input className={ContactFormStyle.custom_input} type="text" name="company" placeholder="Entreprise" />
             </div>          </div>
           <div className={ContactFormStyle.contact_line}>
             <div className={ContactFormStyle.cusput}>
               <div className={ContactFormStyle.encard_glass}>
-                <img src={name} alt="" />
+                <img src={email} alt="" />
               </div>
               <input className={ContactFormStyle.custom_input} type="email" name="user_email" placeholder="E-mail" />
             </div>          </div>
