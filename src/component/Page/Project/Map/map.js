@@ -1,24 +1,29 @@
-import React, { Component } from 'react'
-import MapStyle from './map.module.css'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-class Map extends Component {
-  render() {
-    let position = [51.505, -0.09]
-    return (
-      <div className={MapStyle.map_container}>
-      <MapContainer center={[51.505, -0.09]} zoom={20} scrollWheelZoom={false}>
-<TileLayer
-  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-/>
-<Marker position={[51.505, -0.09]}>
-  <Popup>
-    A pretty CSS3 popup. <br /> Easily customizable.
-  </Popup>
-</Marker>
-</MapContainer>
-      </div>
-    )
-  }
-}
+import * as React from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import IconPerso from './pin.svg'
+export default () => {
 
-export default Map
+  const L = require('leaflet');
+
+   const myIcon = L.icon({
+       iconUrl: IconPerso,
+       iconSize: [48,48],
+       iconAnchor: [32, 64],
+       popupAnchor: null,
+       shadowUrl: null,
+       shadowSize: null,
+       shadowAnchor: null
+   });
+
+  return (
+    <MapContainer center={[47.663793041124926, 6.884026540288047]} zoom={13} scrollWheelZoom={false} style={{ height: "40%" }}>
+      <TileLayer
+        attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <Marker icon={myIcon} position={[47.663793041124926, 6.884026540288047]}>
+      </Marker>
+    </MapContainer>
+  );
+};

@@ -13,6 +13,7 @@ import About from './component/About/about'
 import Contact from './component/Contact/contact'
 import Menu from './component/Menu/menu'
 import Page from './component/Page/page'
+import Loader from './component/Loader/loader'
 
 import './App.css';
 
@@ -185,20 +186,6 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    // var LastTouchY;
-    // window.addEventListener('touchmove', (evt)=>{
-    //   // console.log(evt.touches[0].clientY);
-    //   var CurrentTouchY = evt.touches[0].clientY
-    //   if (this.state.wheelEvent === false) {
-    //     this.setState({wheelEvent: true})
-    //     if (CurrentTouchY > LastTouchY) {
-    //       console.log('scroll up');
-    //     }else {
-    //       console.log('scroll down');
-    //     }
-    //   }
-    //   LastTouchY = CurrentTouchY
-    // })
     var TouchStart
     window.addEventListener('touchstart', (et)=>{
       TouchStart = et.touches[0].clientY;
@@ -938,6 +925,7 @@ class App extends Component {
             <Page PageName="project"/>
           </Route>
           <Route path="/">
+            <Loader />
             <Home scroll={this.state.wheelState} stateBar={this.state.wheelState}
             showMenu={this.state.showMenu} menu1={this.state.menu1}
             menu2={this.state.menu2} menu3={this.state.menu3}

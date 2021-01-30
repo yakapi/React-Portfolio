@@ -32,10 +32,21 @@
   color: white;
   font-family: helvetica;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .info_titre{
   font-size: 28px;
   font-weight: bold;
+  margin-bottom: 20px;
+}
+.info_general{
+  margin-top: 20px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .info_line{
   display: flex;

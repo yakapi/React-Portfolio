@@ -2,15 +2,12 @@ import React, { Component } from 'react'
 import PageProjectStyle from './project.module.css'
 import Menu from '../../Menu/menu'
 import Navigation from '../../Navigation/nav'
+import ContactForm from './ContactForm/contact'
+import MapLeaf from './Map/map'
 
 import email from './email.svg'
-
-import BtnMore from '../../Button/button_more'
-
-import ContactForm from './ContactForm/contact'
-import Map from './Map/map'
-// init("user_UCJ5x8NfybIfSzO3bupff");
-
+import markLocation from './maps-and-flags.svg'
+import phone from './phone.svg'
 
 class PageProject extends Component {
   constructor(props){
@@ -85,7 +82,7 @@ class ScreenContact extends Component{
           <div className={PageProjectStyle.info_zone} >
             <div className={PageProjectStyle.info_box} >
               <h2 className={PageProjectStyle.info_titre}>Informations</h2>
-              <Map />
+              <MapLeaf />
               <div className={PageProjectStyle.info_general}>
                 <div className={PageProjectStyle.info_line}>
                   <div className={PageProjectStyle.encard_icon}>
@@ -95,15 +92,15 @@ class ScreenContact extends Component{
                 </div>
                 <div className={PageProjectStyle.info_line}>
                   <div className={PageProjectStyle.encard_icon}>
-                    <img className={PageProjectStyle.img_icon} src={email} />
+                    <img className={PageProjectStyle.img_icon} src={markLocation} />
                   </div>
-                  <h3 className={PageProjectStyle.info_text}>victor.barlier@oulook.fr</h3>
+                  <h3 className={PageProjectStyle.info_text}>Allée des lauriers, 90300 Offemont</h3>
                 </div>
                 <div className={PageProjectStyle.info_line}>
                   <div className={PageProjectStyle.encard_icon}>
-                    <img className={PageProjectStyle.img_icon} src={email} />
+                    <img className={PageProjectStyle.img_icon} src={phone} />
                   </div>
-                  <h3 className={PageProjectStyle.info_text}>victor.barlier@oulook.fr</h3>
+                  <h3 className={PageProjectStyle.info_text}>06 68 41 61 11</h3>
                 </div>
               </div>
             </div>

@@ -8,26 +8,41 @@ import email from './email.svg'
 
 
 class ContactForm extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      name: false,
+      phone: false,
+      company: false,
+      mail: false
+    }
+  }
   sendEmail = (e) => {
-    alert('hello')
     e.preventDefault();
-
-    emailjs.sendForm('service_t44uhgh', 'template_9mtsevc', e.target, 'user_UCJ5x8NfybIfSzO3bupff')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    console.log(e.target[1].value);
+    let regexText = '^[a-zA-Z]+$'
+    let regexMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    let regexPhone = /^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$/
+    let regexCompany = '^(?!.*<[^>]+>).*'
+    if (e.target[1].value == '') {
+      
+    }
+    // emailjs.sendForm('service_t44uhgh', 'template_9mtsevc', e.target, 'user_UCJ5x8NfybIfSzO3bupff')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
   }
   render() {
     const text = {
-      intro: "N'hésitez pas à nous laisser un message ci-dessous",
-      titre: "Entrer en contact"
+      intro: "N'hésitez pas à me laisser un message ci-dessous",
+      titre: "Entrer en contact",
+      name: "Nom"
     }
     let area = {
       marginLeft: "26px"
     }
-    console.log(text);
     return (
       <div className={ContactFormStyle.contactForm_box}>
         <div className={ContactFormStyle.intro_contact}>
@@ -41,7 +56,7 @@ class ContactForm extends Component {
               <div className={ContactFormStyle.encard_glass}>
                 <img src={name} alt="" />
               </div>
-              <input className={ContactFormStyle.custom_input} type="text" name="user_name" placeholder="Nom" />
+              <input className={ContactFormStyle.custom_input} type="text" name="user_name" placeholder={text.name} />
             </div>
           </div>
           <div className={ContactFormStyle.contact_line}>
@@ -49,7 +64,7 @@ class ContactForm extends Component {
               <div className={ContactFormStyle.encard_glass}>
                 <img src={phone} alt="" />
               </div>
-              <input className={ContactFormStyle.custom_input} type="number" name="phone" placeholder="Téléphone" />
+              <input className={ContactFormStyle.custom_input} type="text" name="phone" placeholder="Téléphone" />
             </div>          </div>
           <div className={ContactFormStyle.contact_line}>
             <div className={ContactFormStyle.cusput}>
