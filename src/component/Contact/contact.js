@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ContactStyle from './contact.module.css'
 import Programming from './programmingSVG.svg'
 import BtnMore from '../Button/button_more'
@@ -101,7 +101,7 @@ function Contact({cLeft1, cLeft2, cLeft3, cLeft4, cRight1, cRight2, cRight3, cRi
                   <div style={animR2} className={ContactStyle.img_fx1}></div>
                   <div style={animR3} className={ContactStyle.img_fx2}></div>
                   <div className={ContactStyle.img_enc}>
-                    <img className={ContactStyle.img_fit} width="100%" height="100%" src={Programming} />
+                    <img className={ContactStyle.img_fit} width="100%" height="100%" alt="Contact_deco" src={Programming} />
                   </div>
                 </div>
                 <div style={animR4} className={ContactStyle.number}>

@@ -25,7 +25,7 @@ class PageContact extends Component {
     }
   }
   toggleMenu = (e)=>{
-    if (this.state.showMenu == false) {
+    if (this.state.showMenu === false) {
       this.setState({showMenu: !this.state.showMenu})
       setTimeout(()=>{
         this.setState({menu1: !this.state.menu1})
@@ -58,7 +58,7 @@ class PageContact extends Component {
   arrowRight = (e) => {
       console.log('right');
       if (this.state.arrowState === false) {
-        if (this.state.arrowCount != 1) {
+        if (this.state.arrowCount !== 1) {
           this.setState({arrowCount: this.state.arrowCount + 1})
           this.setState({arrowState: true})
           setTimeout(()=>{
@@ -70,7 +70,7 @@ class PageContact extends Component {
   arrowLeft = (e) => {
     console.log('left');
     if (this.state.arrowState === false) {
-      if (this.state.arrowCount != 0) {
+      if (this.state.arrowCount !== 0) {
         this.setState({arrowCount: this.state.arrowCount - 1})
         this.setState({arrowState: true})
         setTimeout(()=>{
@@ -105,11 +105,11 @@ class ScreenView extends Component {
   render(){
     let opacityP1 = 1
     let opacityP2 = 0
-    if (this.props.count == 1) {
+    if (this.props.count === 1) {
       opacityP1 = 0
       opacityP2 = 1
     }
-    if (this.props.count == 0) {
+    if (this.props.count === 0) {
       opacityP1 = 1
       opacityP2 = 0
     }
@@ -146,7 +146,7 @@ class ScreenView extends Component {
 
     const AfficheProject = []
     for (var i = 0; i < TableProjet.length; i++) {
-      AfficheProject.push(<ProjectCard affiche={TableProjet[i].image_affiche} type={TableProjet[i].type_projet}
+      AfficheProject.push(<ProjectCard affiche={TableProjet[i].image_affiche} key={i} type={TableProjet[i].type_projet}
                 role={TableProjet[i].role} date={TableProjet[i].date}
                 describe={TableProjet[i].describe} number={TableProjet[i].number}
                 mockup={TableProjet[i].image_mockup} techno={TableProjet[i].image_techno}
@@ -191,7 +191,7 @@ class HeroProject extends Component {
         <div className={PageContactStyle.left_hero}>
         </div>
         <div className={PageContactStyle.right_hero}>
-          <img className={PageContactStyle.image_project} width="100%" height="100%" src={this.props.affiche}/>
+          <img className={PageContactStyle.image_project} alt={this.props.titre} width="100%" height="100%" src={this.props.affiche}/>
         </div>
         <div className={PageContactStyle.visite_zone}>
           <h2 className={PageContactStyle.titre_projet}>{this.props.titre}</h2>

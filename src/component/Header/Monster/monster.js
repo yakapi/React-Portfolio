@@ -19,25 +19,25 @@ function MouseEffect({translateX, translateY, translateFlUpY, translateFlUpX, tr
   return(
     <div>
       <div style={enc_hero_pos} className={ MonsterStyle.encard_hero }>
-        <img width="100%" height="100%" src={ hero }/>
+        <img width="100%" height="100%" alt="hero_home" src={ hero }/>
       </div>
       <div style={enc_flammy_down} className={ MonsterStyle.enc_flamy1 }>
-        <img width="100%" height="100%" src={flamy} />
+        <img width="100%" height="100%" alt="flame" src={flamy} />
       </div>
       <div style={enc_flammy_up} className={ MonsterStyle.enc_flamy2 }>
-        <img width="100%" height="100%" src={flamy} />
+        <img width="100%" height="100%" alt="flame"  src={flamy} />
       </div>
       <div style={enc_flammy_up} className={ MonsterStyle.enc_flamy3 }>
-        <img width="100%" height="100%" src={flamy} />
+        <img width="100%" height="100%" alt="flame"  src={flamy} />
       </div>
       <div style={enc_flammy_down} className={ MonsterStyle.enc_flamy4 }>
-        <img width="100%" height="100%" src={flamy} />
+        <img width="100%" height="100%" alt="flame"  src={flamy} />
       </div>
       <div style={enc_flammy_up} className={ MonsterStyle.enc_flamy5 }>
-        <img width="100%" height="100%" src={flamy} />
+        <img width="100%" height="100%" alt="flame"  src={flamy} />
       </div>
       <div style={enc_flammy_down} className={ MonsterStyle.enc_flamy6 }>
-        <img width="100%" height="100%" src={flamy} />
+        <img width="100%" height="100%" alt="flame"  src={flamy} />
       </div>
     </div>
   )

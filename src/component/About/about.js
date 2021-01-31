@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import AboutStyle from './about.module.css'
 import Design from './design2.svg'
 import BtnMore from '../Button/button_more'
@@ -101,7 +101,7 @@ function About({aLeft1, aLeft2, aLeft3, aLeft4, aRight1, aRight2, aRight3, aRigh
                   <div style={animR2} className={AboutStyle.img_fx1}></div>
                   <div style={animR3} className={AboutStyle.img_fx2}></div>
                   <div className={AboutStyle.img_enc}>
-                    <img className={AboutStyle.img_fit} width="100%" height="100%" src={Design} />
+                    <img className={AboutStyle.img_fit} alt='a-propos_deco' width="100%" height="100%" src={Design} />
                   </div>
                 </div>
                 <div style={animR4} className={AboutStyle.number}>

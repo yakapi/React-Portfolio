@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import LoaderStyle from './loader.module.css'
 
 class Loader extends Component {
-  static propTypes = {
-
-  }
 
   constructor (props) {
     super(props)
@@ -23,7 +19,9 @@ class Loader extends Component {
       this.setState({isLoaded: true})
     },1000)
   }
-
+  componentWillUnmount(){
+    console.log('loader unmount');
+  }
   render () {
     let style
     let load_bar

@@ -17,7 +17,7 @@ import sass from './sass.svg'
 import react from './react.svg'
 import bootstrap from './bootstrap.svg'
 import php from './php.svg'
-import BtnMore from '../../Button/button_more'
+
 
 
 
@@ -34,7 +34,7 @@ class PageAbout extends Component {
     }
   }
   toggleMenu = (e)=>{
-    if (this.state.showMenu == false) {
+    if (this.state.showMenu === false) {
       this.setState({showMenu: !this.state.showMenu})
       setTimeout(()=>{
         this.setState({menu1: !this.state.menu1})
@@ -107,7 +107,7 @@ class HeroAbout extends Component{
         <div className={PageAboutStyle.left_hero}>
         </div>
         <div className={PageAboutStyle.right_hero}>
-          <img className={PageAboutStyle.image_project} width="100%" height="100%" src={about}/>
+          <img className={PageAboutStyle.image_project} alt="theme_projet" width="100%" height="100%" src={about}/>
         </div>
         <div className={PageAboutStyle.visite_zone}>
           <h2 className={PageAboutStyle.titre_projet}>Bienvenue chez moi</h2>
@@ -147,7 +147,7 @@ class Who extends Component{
                   <p className={PageAboutStyle.helve}>{disco3}</p>
             </div>
             <div className={PageAboutStyle.encard_geek}>
-              <img className={PageAboutStyle.geek} src={geek} width='100%' height='100%' />
+              <img className={PageAboutStyle.geek} alt="photo_profil" src={geek} width='100%' height='100%' />
             </div>
           </div>
       </div>
@@ -175,7 +175,7 @@ class Passion extends Component{
     ]
     let PassionBoard = []
     for (var i = 0; i < PassionTable.length; i++) {
-      PassionBoard.push(<PassionCard image={PassionTable[i].image} titre={PassionTable[i].titre} content={PassionTable[i].content}/>)
+      PassionBoard.push(<PassionCard key={i} image={PassionTable[i].image} titre={PassionTable[i].titre} content={PassionTable[i].content}/>)
     }
     return(
       <div className={PageAboutStyle.passion_view}>
@@ -198,7 +198,7 @@ class PassionCard extends Component{
     return(
       <div className={PageAboutStyle.passion_card}>
         <div className={PageAboutStyle.encard_passion}>
-          <img src={this.props.image} width='100%' height='100%' />
+          <img src={this.props.image} alt={this.props.titre} width='100%' height='100%' />
         </div>
         <h5 className={PageAboutStyle.titlePa}>{this.props.titre}</h5>
         <p className={PageAboutStyle.contentPa}>{this.props.content}</p>
@@ -273,7 +273,7 @@ class Skill extends Component{
     ]
     let AfficheSkill = []
     for (var i = 0; i < SkillTable.length; i++) {
-      AfficheSkill.push(<SkillCard image={SkillTable[i].image} title={SkillTable[i].title} time={SkillTable[i].time} loader={SkillTable[i].percent} />)
+      AfficheSkill.push(<SkillCard key={i} image={SkillTable[i].image} title={SkillTable[i].title} time={SkillTable[i].time} loader={SkillTable[i].percent} />)
     }
     return(
       <div className={PageAboutStyle.skill_view}>
@@ -301,7 +301,7 @@ class SkillCard extends Component{
     return(
       <div className={PageAboutStyle.skillcard_view}>
         <div className={PageAboutStyle.encard_skillimg}>
-          <img src={this.props.image} width='100%' height='100%' />
+          <img src={this.props.image} alt={this.props.title} width='100%' height='100%' />
         </div>
         <div className={PageAboutStyle.skill_boxe}>
           <div className={PageAboutStyle.skill_title}>
@@ -327,7 +327,7 @@ class AboutFooter extends Component{
         <p>victor.barlier@outlook.fr</p>
         <div className={PageAboutStyle.footer_react}>
           <div className={PageAboutStyle.react_enc}>
-            <img src={react} width='100%' height='100%'/>
+            <img src={react} alt="logo_react" width='100%' height='100%'/>
           </div>
           <p className={PageAboutStyle.footer_p}>React Web App</p>
         </div>

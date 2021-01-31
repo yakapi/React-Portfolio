@@ -4,13 +4,25 @@
   font-family: helvetica;
   margin-top: 3vh;
   margin-bottom: 3vh;
+
+}
+.intro_contact{
+
 }
 .form{
   display: flex;
   flex-direction: column;
 }
-.contact_line{
-  margin-top: 2vh;
+.error_line{
+  height: 4vh;
+  display: flex;
+  align-items: center;
+}
+.error_text{
+  color: #D5243E;
+}
+.textarea_line{
+  margin-top: 1vh;
   margin-bottom: 2vh;
 }
 .custom_input{
@@ -27,6 +39,8 @@
 .custom_textarea{
   border: 1px solid #F9F8F4;
   background-color: #F9F8F4;
+  height: 7vh;
+  resize: none;
 }
 .custom_textarea:focus{
   outline: 0;
@@ -71,7 +85,7 @@
   margin-bottom: 2vh;
 }
 .text_intro{
-  width: 65%;
+  width: 250px;
   margin-bottom: 5vh;
 }
 .sub_box{
@@ -86,4 +100,28 @@
   height: 25px;
   width: 100px;
   margin-left: 55px;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+.subutton:hover{
+  transform: scale(1.05);
+}
+
+@media (min-width: 576px) {  }
+
+
+@media (min-width: 768px) {  }
+
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1200px) {
+  .contactForm_box{
+    margin-right: 3vw;
+  }
+}
+@media (min-width: 1500px) {
+  .contactForm_box{
+    margin-right: 6vw;
+  }
 }

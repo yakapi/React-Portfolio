@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Navigation from './component/Navigation/nav'
 import Header from './component/Header/header'
@@ -20,7 +19,7 @@ import './App.css';
 function ScrollDown({scroll}){
   console.log(scroll);
   var scrollfx = {}
-  if (scroll != 0) {
+  if (scroll !== 0) {
     scrollfx = {
       opacity: '0',
       bottom: '0'
@@ -85,17 +84,17 @@ function ShowBar({stateBar}){
 
 function Screen({stateScreen, pLeft1, pLeft2, pLeft3, pLeft4, pRight1, pRight2, pRight3, pRight4, pRight5, aLeft1, aLeft2, aLeft3, aLeft4, aRight1, aRight2, aRight3, aRight4, aRight5, cLeft1, cLeft2, cLeft3, cLeft4, cRight1, cRight2, cRight3, cRight4, cRight5}){
   var test = {}
-  if (stateScreen == 1) {
+  if (stateScreen === 1) {
     test = {
       transform: 'translateY(-100vh)'
     }
 
-  }else if (stateScreen == 2) {
+  }else if (stateScreen === 2) {
     test = {
       transform: 'translateY(-200vh)'
     }
 
-  }else if (stateScreen == 3) {
+  }else if (stateScreen === 3) {
     test = {
       transform: 'translateY(-300vh)'
     }
@@ -153,9 +152,10 @@ class App extends Component {
       cr5: false
     }
   }
+
   toggleMenu = (e)=>{
     console.log(this.state.showMenu);
-    if (this.state.showMenu == false) {
+    if (this.state.showMenu === false) {
       this.setState({showMenu: !this.state.showMenu})
       setTimeout(()=>{
         this.setState({menu1: !this.state.menu1})
@@ -197,7 +197,7 @@ class App extends Component {
         if (TouchStart > TouchEnd + 5) {
           console.log('slide down');
           //scroll down
-          if (this.state.wheelState != 3) {
+          if (this.state.wheelState !== 3) {
             var wheelStateCount = this.state.wheelState + 1
             this.setState({wheelState: wheelStateCount})
             setTimeout(()=>{
@@ -367,15 +367,15 @@ class App extends Component {
               },300)
             }
           }
-          if (this.state.wheelState == 3) {
+          if (this.state.wheelState === 3) {
             this.setState({wheelEvent: false})
           }
         }else if (TouchStart < TouchEnd - 5) {
           console.log('slide up');
           // scroll up
           //Deplacement du screen
-          if (this.state.wheelState != 0) {
-            var wheelStateCount = this.state.wheelState - 1
+          if (this.state.wheelState !== 0) {
+             wheelStateCount = this.state.wheelState - 1
             this.setState({wheelState: wheelStateCount})
             setTimeout(()=>{
               this.setState({wheelEvent: false})
@@ -545,7 +545,7 @@ class App extends Component {
             }
 
           }
-          if (this.state.wheelState == 0) {
+          if (this.state.wheelState === 0) {
             this.setState({wheelEvent: false})
           }
         }
@@ -557,7 +557,7 @@ class App extends Component {
         if (e.deltaY < 0) {
           // scroll up
           //Deplacement du screen
-          if (this.state.wheelState != 0) {
+          if (this.state.wheelState !== 0) {
             var wheelStateCount = this.state.wheelState - 1
             this.setState({wheelState: wheelStateCount})
             setTimeout(()=>{
@@ -728,13 +728,13 @@ class App extends Component {
             }
 
           }
-          if (this.state.wheelState == 0) {
+          if (this.state.wheelState === 0) {
             this.setState({wheelEvent: false})
           }
         }else {
           //scroll down
-          if (this.state.wheelState != 3) {
-            var wheelStateCount = this.state.wheelState + 1
+          if (this.state.wheelState !== 3) {
+            wheelStateCount = this.state.wheelState + 1
             this.setState({wheelState: wheelStateCount})
             setTimeout(()=>{
               this.setState({wheelEvent: false})
@@ -903,7 +903,7 @@ class App extends Component {
               },300)
             }
           }
-          if (this.state.wheelState == 3) {
+          if (this.state.wheelState === 3) {
             this.setState({wheelEvent: false})
           }
         }
@@ -925,7 +925,6 @@ class App extends Component {
             <Page PageName="project"/>
           </Route>
           <Route path="/">
-            <Loader />
             <Home scroll={this.state.wheelState} stateBar={this.state.wheelState}
             showMenu={this.state.showMenu} menu1={this.state.menu1}
             menu2={this.state.menu2} menu3={this.state.menu3}
@@ -946,6 +945,7 @@ class App extends Component {
             cRight3={this.state.cr3} cRight4={this.state.cr4}
             cRight5={this.state.cr5}
             />
+          <Loader />
           </Route>
         </Switch>
       </div>

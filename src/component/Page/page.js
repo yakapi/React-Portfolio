@@ -23,8 +23,8 @@ function Page({PageName}) {
   }else if (PageName == 'contact') {
     return (
       <div className={PageStyle.page_container} >
-        <Loader />
         <PageContact />
+        <Loader />
       </div>
     )
   }

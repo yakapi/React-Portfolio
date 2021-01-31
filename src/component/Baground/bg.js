@@ -8,7 +8,7 @@ function BackgroundEffect ({translateX, translateY}){
   }
     return(
       <div style={enc_back_pos} className={ BgStyle.background_box }>
-        <img width="100%" height="100%" src={bg} />
+        <img width="100%" height="100%" alt='background_home' src={bg} />
       </div>
     )
 }
